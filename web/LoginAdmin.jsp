@@ -68,12 +68,20 @@
 
 
         <div class="row"> 
-            <div class="col-md-5"></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1">
+                <p class="admin"><a href="Home.jsp" style="color: white">
+                <span class="glyphicon glyphicon-menu-left"></span> Back
+                    </a></p>
+            </div>
+            <div class="col-md-3"></div>
             
-            <div class="col-md-2"><h1 style="color: white">  Admin Login</h1></div>
+            <div class="col-md-2"><h1 style="color: white; font-weight: bold; font-size: 2.6em;">  Admin Login</h1></div>
             
             <div class="col-md-5"></div>
         </div>
+        
+        
         
        <div class="login-page">
         <div class="form">

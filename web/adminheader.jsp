@@ -77,7 +77,7 @@
                  </li>
                  
                     <li><a href="orders.jsp"><span class="glyphicon glyphicon-tasks"></span> Orders</a></li>
-                    <li><a href="Home.jsp"><span class="glyphicon glyphicon-log-ou"></span> Logout</a></li>
+                    <li><a href="LogoutPage.jsp"><span class="glyphicon glyphicon-log-ou"></span> Logout</a></li>
                </ul>
             </div>
         </nav>

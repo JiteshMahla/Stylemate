@@ -68,7 +68,13 @@
 
 
         <div class="row"> 
-            <div class="col-md-9"></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1">
+                <p class="admin"><a href="Home.jsp" style="color: white">
+                <span class="glyphicon glyphicon-menu-left"></span> Back
+                    </a></p>
+            </div>
+            <div class="col-md-7"></div>
             <div class="col-md-2">
                 <p class="admin"><a href="LoginAdmin.jsp" style="color: white">
                         <span class="glyphicon glyphicon-user"></span>   Admin Login</a></p>
