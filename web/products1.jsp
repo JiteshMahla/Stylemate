@@ -1,8 +1,9 @@
 <%-- 
-    Document   : products
-    Created on : Jul 12, 2017, 7:57:09 PM
+    Document   : products1
+    Created on : Nov 19, 2017, 12:42:17 PM
     Author     : DV
 --%>
+
 
 <%@page import="java.sql.*" contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -21,7 +22,7 @@
     <%@include file="header.jsp" %> 
         
         <div class="container">
-            <BR>
+           
         <%           
                Connection con=null;
                Statement smt;
@@ -35,8 +36,7 @@
                    
          %>         
          <div class="row">
-             
-             <div class="col-md-12" style="background-color: black; color: white">
+             <div class="col-md-12" style="background-color: black">
                        <h1 align="center">
                            DEALS
                        </h1>
@@ -52,7 +52,7 @@
                        <div class="row container-fluid">
   <div class="row">
     <div class="thumbnail  thumbnails">
-        <div class="col-lg-3"><img src="images/<%= rs.getString(6)%>" alt="MISSING" class="img2"></div>
+        <div class="col-lg-3"><img src="images/<%= rs.getString(5)%>" alt="MISSING" class="img2"></div>
         <div class="caption col-md-6">
             <p>                
                 <br><br>
@@ -60,9 +60,9 @@
                 <br>              
                 PRODUCT NAME:          <%= rs.getString(2)%> 
                 <br>
-                 PRODUCT DESCRIPTION:           <%= rs.getString(4)%>                          
+                 PRODUCT DESCRIPTION:           <%= rs.getString(3)%>                          
                 <br>              
-                PRODUCT PRICE:          <%= rs.getString(5)%> 
+                PRODUCT PRICE:          <%= rs.getString(4)%> 
             </p>
         </div>
     </div>
@@ -75,7 +75,7 @@
                    ResultSet rs1=smt.executeQuery(qry1);    
                    
                    %>
-                   <div class="col-md-12" style="background-color: black; color: white">
+                   <div class="col-md-12" style="background-color: black">
                        <h1 align="center">
                            PRODUCTS
                        </h1>
@@ -89,16 +89,16 @@
                        <div class="row container-fluid">
   <div class="row">
     <div class="thumbnail  thumbnails">
-        <div class="col-lg-3"><img src="images/<%= rs1.getString(6)%>" alt="MISSING" class="img2"></div>
+        <div class="col-lg-3"><img src="images/<%= rs1.getString(5)%>" alt="MISSING" class="img2"></div>
         <div class="caption col-md-6">
             <p>                
                 PRODUCT ID:           <%= rs1.getString(1)%>                          
                 <br>              
                 PRODUCT NAME:          <%= rs1.getString(2)%> 
                 <br>
-                 PRODUCT DESCRIPTION:           <%= rs1.getString(4)%>                          
+                 PRODUCT DESCRIPTION:           <%= rs1.getString(3)%>                          
                 <br>              
-                PRODUCT PRICE:          <%= rs1.getString(5)%> 
+                PRODUCT PRICE:          <%= rs1.getString(4)%> 
             </p>
         </div>
     </div>
@@ -125,4 +125,5 @@
         
     </body>
 </html>
+
 
