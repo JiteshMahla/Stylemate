@@ -19,7 +19,7 @@
     </head>
     <body>
          <div class="container-fluid">
-            <%@include file="header.jsp" %> 
+            <%@include file="header2.jsp" %> 
             <div class="row">
                 <div class="col-md-2">
                     <ul class="ul2">

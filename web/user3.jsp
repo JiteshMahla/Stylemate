@@ -34,7 +34,7 @@
          
     </head>
     <body>
-    <%@include file="header.jsp" %>
+    <%@include file="header2.jsp" %>
     <form action="buypage.jsp" method="post">
         <%
              String r;

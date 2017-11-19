@@ -18,7 +18,24 @@
    
     </head>
     <body class="b1">
-    <%@include file="header.jsp" %> 
+    <%
+            String email="";
+            if(session.getAttribute("email")!=null)
+            {
+                email = session.getAttribute("email").toString();
+                %>
+                <%@include file="header2.jsp" %>
+                <%
+            }
+            else
+            {
+                %>
+                
+                <%@include file="header.jsp" %>
+                <%
+            }
+            
+            %> 
         
         <div class="container">
             <BR>

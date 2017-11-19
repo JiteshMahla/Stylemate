@@ -20,7 +20,26 @@
     </head>
     <body>
         <div class="container-fluid">
-            <%@include file="header.jsp" %> 
+            
+            <%
+            String email="";
+            if(session.getAttribute("email")!=null)
+            {
+                email = session.getAttribute("email").toString();
+                %>
+                <%@include file="header2.jsp" %>
+                <%
+            }
+            else
+            {
+                %>
+                
+                <%@include file="header.jsp" %>
+                <%
+            }
+            
+            %>
+            
             <div class="row" style="background-color: black">
                  <h1 class="head1">Membership And Offers</h1>
             </div>
