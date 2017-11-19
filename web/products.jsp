@@ -21,7 +21,7 @@
     <%@include file="header.jsp" %> 
         
         <div class="container">
-           
+            <BR>
         <%           
                Connection con=null;
                Statement smt;
@@ -35,7 +35,8 @@
                    
          %>         
          <div class="row">
-             <div class="col-md-12" style="background-color: black">
+             
+             <div class="col-md-12" style="background-color: black; color: white">
                        <h1 align="center">
                            DEALS
                        </h1>
@@ -74,7 +75,7 @@
                    ResultSet rs1=smt.executeQuery(qry1);    
                    
                    %>
-                   <div class="col-md-12" style="background-color: black">
+                   <div class="col-md-12" style="background-color: black; color: white">
                        <h1 align="center">
                            PRODUCTS
                        </h1>
