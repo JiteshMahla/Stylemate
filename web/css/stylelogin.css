@@ -131,3 +131,22 @@ img {
     height: auto;
     opacity: 0.3;
 }
+
+.admin {
+  text-decoration: none;
+  margin: 10px 25px 2px 0px;
+  padding: 8px;
+  background-color: #d6d6c2;
+  border-radius: 2px;
+  color: #ffffff;
+  font-size: 15px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+.admin:hover {
+  background: #adad85;
+  color: #ffffff;
+}

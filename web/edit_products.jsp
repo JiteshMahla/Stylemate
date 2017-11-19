@@ -13,6 +13,18 @@
         <link href="admincss.css" rel="stylesheet">
     </head>
     <body>
+         <%
+            String email="";
+            if(session.getAttribute("email")!=null)
+            {
+                email = session.getAttribute("email").toString(); 
+            }
+            else
+            {
+                response.sendRedirect("LoginPage.jsp");
+            }
+            
+            %>
         <%@include file="adminheader.jsp" %>
         <form method="post">
         <%

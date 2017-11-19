@@ -41,6 +41,19 @@
      </head>
     <body>
         
+         <%
+            String email="";
+            if(session.getAttribute("email")!=null)
+            {
+                email = session.getAttribute("email").toString(); 
+            }
+            else
+            {
+                response.sendRedirect("LoginPage.jsp");
+            }
+            
+            %>
+        
         <%@include file="adminheader.jsp" %>
         
         <form action="uploadpic" method="post" enctype="multipart/form-data">

@@ -46,15 +46,15 @@
         try
         {
         String qry="select * from login_details where email='"+email+"' and password='"+pass+"' and type=1";
-        ResultSet rs=smt.executeQuery(qry);
+        ResultSet rs= smt.executeQuery(qry);
         if(rs.next())
         {
             session.setAttribute("email", email);
-            response.sendRedirect("user1.jsp");
+            response.sendRedirect("adminaccount.jsp");
         }
         else
         {
-            error="Sorry. Record not Found. Register Now?";
+            error="Sorry. Record not Found. ";
         }
         }
         catch(Exception ex)
@@ -68,12 +68,11 @@
 
 
         <div class="row"> 
-            <div class="col-md-9"></div>
-            <div class="col-md-2">
-                <p class="admin"><a href="LoginAdmin.jsp" style="color: white">
-                        <span class="glyphicon glyphicon-user"></span>   Admin Login</a></p>
-            </div>
-            <div class="col-md-1"></div>
+            <div class="col-md-5"></div>
+            
+            <div class="col-md-2"><h2>Admin Login</h2></div>
+            
+            <div class="col-md-5"></div>
         </div>
         
        <div class="login-page">

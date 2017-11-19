@@ -20,7 +20,18 @@
      </head>
     <body>
         
-        
+         <%
+            String email="";
+            if(session.getAttribute("email")!=null)
+            {
+                email = session.getAttribute("email").toString(); 
+            }
+            else
+            {
+                response.sendRedirect("LoginPage.jsp");
+            }
+            
+            %>
         
         <div class="container-fluid">
             <%@include file="adminheader.jsp" %>
