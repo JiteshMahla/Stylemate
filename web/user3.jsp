@@ -98,7 +98,7 @@
              %>
              
             <tr>
-               <td colspan="2" align="center"><input type="submit" onclick="return checkNll()" name="btnSubmit" value="ADD TO CART"></td>
+               <td colspan="2" align="center"><input type="submit" onclick="return checkNll()" name="btnSubmit" value="BUY NOW"></td>
             </tr>
             </table>
             </form>

@@ -20,6 +20,17 @@
     <body class="b1">
     <%@include file="header.jsp" %> 
         
+    <h1 style="color: palevioletred; font-family:'' "></h1>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       <%@include file="footer.jsp" %>
         
          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

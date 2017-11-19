@@ -22,7 +22,7 @@
         <div class="container-fluid">
             <%@include file="header.jsp" %> 
             <div class="row" style="background-color: black">
-                 <h1 class="head1">About Us </h1>
+                 <h1 class="head1">GALLERY </h1>
             </div>
             <div class="content">
                
@@ -288,7 +288,7 @@
                    
             </div>
         </div>
-        
+           <%@include file="footer.jsp" %>
         
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

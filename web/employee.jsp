@@ -73,6 +73,7 @@
         </script>    
     </head>
     <body>
+           <%@include file="header.jsp" %>
         <font size="5" color="red">ENTER YOUR DETAILS</font>
         <form method="POST"> 
             <table >
@@ -112,5 +113,6 @@
                 </tbody>
             </table>   
         </form>
+           <%@include file="footer.jsp" %>
     </body>
 </html>
