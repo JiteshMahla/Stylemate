@@ -66,8 +66,8 @@
       <ul class="nav navbar-nav">
         <li><a href="Home.jsp">HOME</a></li>
          <li><a href="aboutUs.jsp">ABOUT US</a></li>
-            <li><a href="spaAndSalon.jsp">Spa and Salon</a></li>
-            <li><a href="products.jsp">LifeStyle Retails</a></li>
+            <li><a href="spaAndSalon.jsp">SPA AND SALON</a></li>
+            <li><a href="products.jsp">LIFESTYLE RETAIL</a></li>
         <li><a href="gallery.jsp">GALLARY</a></li>
         <li><a href="MembershipAndOffer.jsp">MEMBERSHIP & OFFER</a></li>
         <li><a href="#">CONTACT US</a></li>
