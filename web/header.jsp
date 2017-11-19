@@ -39,7 +39,7 @@
                     
                         </div>  
                         <div class="col-md-2">
-                                <a href="Book.jsp" class="btn btn-default btn-sm al-btn-right" role="button" name="btnBook">
+                                <a href="#" class="btn btn-default btn-sm al-btn-right" role="button" name="btnBook">
       Book Online </a>
                         </div>   
                         <div class="col-md-2">
