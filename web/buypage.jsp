@@ -30,7 +30,19 @@
             %>
             
          <%@include file="header2.jsp" %> 
-        
+        <div class="row">
+                <div class="col-md-2">
+                    <ul class="ul2">
+                        <li class="li2"><a href="user2.jsp?i=hair">Hair</a></li>
+                        <li class="li2"><a href="user2.jsp?i=facial">Facial</a></li>
+                        <li class="li2"><a href="user2.jsp?i=body">Body</a></li>
+                        <li class="li2"><a href="user2.jsp?i=make-up">Make-up</a></li>
+                        <li class="li2"><a href="user2.jsp?i=wash">Wash</a></li>
+                        <li class="li2"><a href="user2.jsp?i=cream">Mask/Cream</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-md-10">
          <%
             
              String deal_id, user;
@@ -84,6 +96,8 @@
           
             %>
          
+                </div>
+        </div>
          <%@include file="footer.jsp" %> 
     </body>
 </html>
