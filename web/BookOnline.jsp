@@ -1,0 +1,211 @@
+<%-- 
+    Document   : BookOnline
+    Created on : Nov 19, 2017, 10:24:48 PM
+    Author     : Jitesh Mahla
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Book Appointment</title>
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style2.css" />
+         <link rel="stylesheet" href="css/stylelogin.css" />
+         
+         <script type="text/javascript">
+            
+            function ajaxname(str)
+            {
+                var rdiv = document.getElementById("resultName");
+                var objrequest = new XMLHttpRequest;
+                
+                objrequest.onreadystatechange = function()
+                {
+                    if(objrequest.readyState===4 && objrequest.status===200)
+                    {
+                        rdiv.innerHTML = objrequest.responseText;
+                    }
+                       
+                }
+                    objrequest.open("GET","CreateAccount1Name.jsp?name="+str+"",true);
+                    objrequest.send();    
+            }
+            function ajaxemail(str)
+            {
+                var rdiv = document.getElementById("resultEmail");
+                var objrequest = new XMLHttpRequest;
+                
+                objrequest.onreadystatechange = function()
+                {
+                    if(objrequest.readyState===4 && objrequest.status===200)
+                    {
+                        rdiv.innerHTML = objrequest.responseText;
+                    }
+                       
+                }
+                    objrequest.open("GET","CreateAccount2Email.jsp?email="+str+"",true);
+                    objrequest.send();    
+            }
+            function ajaxpass(str)
+            {
+                var rdiv = document.getElementById("resultPass");
+                var objrequest = new XMLHttpRequest;
+                
+                objrequest.onreadystatechange = function()
+                {
+                    if(objrequest.readyState===4 && objrequest.status===200)
+                    {
+                        rdiv.innerHTML = objrequest.responseText;
+                    }
+                       
+                }
+                    objrequest.open("GET","CreateAccount3Pass.jsp?pass="+str+"",true);
+                    objrequest.send();    
+            }
+            
+        </script>
+        
+    </head>
+    <body>
+        
+        <%@include file="ConnectPage.jsp" %>
+        
+         <%
+         int flag=0;
+          String result="",error="";
+        if(request.getParameter("btnRegister")!=null)
+        {
+            
+            String email, name, pass;
+            int type;
+            
+            email = request.getParameter("tbEmail");
+            pass = request.getParameter("tbPass");
+            name = request.getParameter("tbUsername");
+            
+            type = 0;
+            
+            if(name=="" && pass=="" && email=="")
+            {
+                error = "Please fill the Details.";   
+            }
+            else
+            {
+            
+            try{
+                String qry = "insert into login_details values('"+email+"','"+name+"','"+pass+"','"+type+"')";
+                int r=smt.executeUpdate(qry);
+                if(r>0)
+                {
+                    flag=1;
+                }
+                con.close();
+            }
+            catch(Exception ex)
+            {
+                out.println(ex);
+            }
+            
+            }
+        }
+        %>
+        
+        <%
+            String email="";
+            if(session.getAttribute("email")!=null)
+            {
+                email = session.getAttribute("email").toString(); 
+            }
+            else
+            {
+                response.sendRedirect("LoginPage.jsp");
+            }
+            
+            %>
+            
+           
+            <%@include file="header2.jsp" %> 
+            
+        <div class="row"> 
+            <div class="col-md-1"></div>
+            <div class="col-md-1">
+                <p class="admin"><a href="Home.jsp" style="color: white">
+                <span class="glyphicon glyphicon-menu-left"></span> Back
+                    </a></p>
+            </div>
+            <div class="col-md-10"></div>
+        </div>
+        
+        <div class="login-page">
+        <div class="form">
+    <form>
+      <input type="text" name="tbUsername" onkeyup="ajaxname(this.value)" placeholder="Username"/>
+      <div id="resultName">
+                
+            </div>
+      
+      <input type="text" name="tbEmail" onkeyup="ajaxemail(this.value)" placeholder="Email address"/>
+      <div id="resultEmail">
+                
+            </div>
+      
+      <input type="password" name="tbPass" onkeyup="ajaxpass(this.value)"  placeholder="Password"/><div class="hint-popup">
+  <a href="#" data-toggle="popover" data-trigger="hover" data-content="Password must contain atleast one digit,
+     a lower case letter, an upper case letter, a special character, no whitespaces and must be of atleast 8 characters.">Hint?</a>
+</div>
+      
+      
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+
+      <div id="resultPass">
+                
+            </div>
+      
+      <input type="submit" class="btn-custom" name="btnRegister" value="Register">
+      <div class="alert-login">
+  <%=error%>
+</div>
+      <p class="message">Already registered? <a href="LoginPage.jsp">Sign In</a></p>
+    </form>
+  </div>
+</div>
+  <%
+    if(flag==1)
+    {
+        %>
+        <div class="alert-create">
+            Account Created.
+            Welcome to  Stylemate.<br>
+        </div>
+        <div class="align-center">
+            <a class="a" href="LoginPage.jsp">Sign in Now</a>
+        </div>
+            <%
+    }
+        
+        %>
+
+        
+        
+         
+        
+        
+        
+         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+        
+    </body>
+</html>
