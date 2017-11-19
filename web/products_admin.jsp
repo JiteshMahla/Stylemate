@@ -108,7 +108,7 @@
   
     <div class="thumbnail  thumbnails">        
       <a href="edit_products.jsp?i=<%= rs1.getString(1)%>">
-        <div class="col-md-3"><img src="images/<%= rs1.getString(5)%>" class="img2"></div>
+        <div class="col-md-3"><img src="images/<%= rs1.getString(6)%>" class="img2"></div>
         
         <div class="col-md-6 caption">
             <p>                
@@ -116,9 +116,9 @@
                 <br>               
                 PRODUCT NAME:          <%= rs1.getString(2)%>        
                 <br>
-                 PRODUCT DESCRIPTION:           <%= rs1.getString(3)%>                          
+                 PRODUCT DESCRIPTION:           <%= rs1.getString(4)%>                          
                 <br>              
-                PRODUCT PRICE:          <%= rs1.getString(4)%> 
+                PRODUCT PRICE:          <%= rs1.getString(5)%> 
             </p>
         </div>
       </a>
