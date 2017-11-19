@@ -70,7 +70,7 @@
         <div class="row"> 
             <div class="col-md-5"></div>
             
-            <div class="col-md-2"><h2>Admin Login</h2></div>
+            <div class="col-md-2"><h1 style="color: white">  Admin Login</h1></div>
             
             <div class="col-md-5"></div>
         </div>
@@ -78,7 +78,7 @@
        <div class="login-page">
         <div class="form">
     <form class="login-form">
-      <input type="text" id="tbEmail" name="tbEmail" placeholder="Email id"/>
+      <input type="text" id="tbEmail" name="tbEmail" placeholder="Admin's email id"/>
       <div class="alert-login">
   <%=error1%>
 </div>
@@ -90,7 +90,7 @@
       <div class="alert-login">
   <%=error%>
 </div>
-      <p class="message">Not registered? <a href="CreateAccount.jsp">Create an account</a></p>
+     
     </form>
   </div>
 </div>
