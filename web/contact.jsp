@@ -19,12 +19,34 @@
     </head>
     <body class="b1">
     <%@include file="header.jsp" %> 
-        
-    <h1 style="color: palevioletred; font-family:'' "></h1>
+    <div class="container-fluid"> 
+    <h1 style="color: palevioletred"> Hello guests, </h1>
+    <br>
+    <h3>
+        You can contact us using mobile at number 9876444515.
+        <br>
+        Or you can simply visit us at #2606, Sector-37 C, Chandigarh. We will be much glad to see you.
+        <br>
+        Always at your service,
+        <br>
+        Team Gorgeous Salon
+    </h3>
     
+    </div> 
+    <br><br><br><br>
     
-    
-    
+    <div class="col-lg-12" style="background-color: white">
+                          <h2 class="head2"> </h2>
+                                  <marquee  onmousedown="this.stop();" onmouseup="this.start();" scrollamount="15">                                    
+                                      <img src="about/21.jpg" class="imgm">      
+                                      <img src="about/22.jpg" class="imgm">  
+                                      <img src="about/23.jpg" class="imgm">  
+                                      <img src="about/24.jpg" class="imgm">  
+                                      <img src="about/25.jpg" class="imgm">  
+                                      <img src="about/26.jpg" class="imgm">  
+                                  </marquee>
+                              
+                   </div>
     
     
     

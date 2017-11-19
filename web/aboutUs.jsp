@@ -68,13 +68,8 @@
                    
                 
                 
-                  <div class="row">
-                   <div class="col-lg-6">
-                          <h2 class="head2">Our Certificates</h2>
-                          
-                                                                                                     
-                   </div>
-                   <div class="col-lg-6">
+                  
+                <div class="col-lg-12" style="background-color: white">
                           <h2 class="head2">Our staff </h2>
                                   <marquee  onmousedown="this.stop();" onmouseup="this.start();" scrollamount="15">                                    
                                       <img src="about/21.jpg" class="imgm">      
