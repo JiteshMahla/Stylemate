@@ -53,7 +53,7 @@
     <div class="thumbnail thumbnails">
       <a href="edit_products.jsp?i=<%= rs.getString(1)%>">
           <div class="col-md-3">
-             <img src="images/<%= rs.getString(5)%>" class="img2" >
+             <img src="images/<%= rs.getString(6)%>" class="img2" >
      
           </div>
               <div class="col-md-6 caption">
@@ -62,9 +62,9 @@
                 <br>               
                 DEAL NAME:          <%= rs.getString(2)%>       
                 <br>
-                 PRODUCT DESCRIPTION:           <%= rs.getString(3)%>                          
+                 PRODUCT DESCRIPTION:           <%= rs.getString(4)%>                          
                 <br>              
-                PRODUCT PRICE:          <%= rs.getString(4)%> 
+                PRODUCT PRICE:          <%= rs.getString(5)%> 
             </p>
         </div>
       </a>

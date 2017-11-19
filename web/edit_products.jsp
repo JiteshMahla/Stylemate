@@ -107,14 +107,14 @@
               
             <tr> 
                 <th class="th1">Product Description:</th>
-                <td class="td1"><input type="text" name="tbDesc" value="<%= rs.getString(3)%>" > </td>
+                <td class="td1"><input type="text" name="tbDesc" value="<%= rs.getString(4)%>" > </td>
             </tr> 
             <tr> 
                 <th class="th1">Product Price:</th>
-                <td class="td1" ><input type="text" name="tbPrice" value="<%= rs.getString(4)%>" > </td>
+                <td class="td1" ><input type="text" name="tbPrice" value="<%= rs.getString(5)%>" > </td>
             </tr> 
             <tr>                
-                <td class="td1" colspan="2" align="center"> <img  src="images/<%= rs.getString(5)%>" width=300 height=300> </td>
+                <td class="td1" colspan="2" align="center"> <img  src="images/<%= rs.getString(6)%>" width=300 height=300> </td>
             </tr>
             
             <tr>

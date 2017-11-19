@@ -14,7 +14,8 @@
     <body>
          
         <%@include file="adminheader.jsp" %>
-        <h1>Hello Admin!</h1>
+        <div style="height: 400px">
+            <h1>Hello Admin!</h1>
         <br>
         <h3>
             You can modify/add/delete the deals and the products showing on your website by clicking on deals, above in the menu bar.
@@ -22,14 +23,16 @@
             
             <br><br>
             If you have any doubts  or need any modifications,, contact your developers.
-            <br>
+            <br><br>
             Happy administration!
         </h3>
+        </div>
         
         
         
         
-        
-        <%@include file="footer.jsp" %>
+   
+            <%@include file="footer.jsp" %>
+ 
     </body>
 </html>
