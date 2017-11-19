@@ -54,9 +54,6 @@
                     #
              </th>
              <th>
-                 CUSTOMER NAME
-             </th>
-             <th>
                  CUSTOMER  EMAIL
              </th>
              <th>
@@ -75,9 +72,6 @@
                        <tr>
                            <td>
                                <%=i %>
-                           </td>
-                           <td>
-                               <%=rs.getString(2) %>
                            </td>
                            <td>
                                <%=rs.getString(1) %>
