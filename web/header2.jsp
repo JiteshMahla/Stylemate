@@ -64,7 +64,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="Home.jsp">HOME</a></li>
+        <li><a href="user1.jsp">HOME</a></li>
          <li><a href="aboutUs.jsp">ABOUT US</a></li>
             <li><a href="spaAndSalon.jsp">SPA AND SALON</a></li>
             <li><a href="products.jsp">LIFESTYLE RETAIL</a></li>
