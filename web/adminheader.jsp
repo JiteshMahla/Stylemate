@@ -77,7 +77,6 @@
                  </li>
                  
                     <li><a href="#">ORDERS</a></li>
-                    <li><a href="admin_employee.jsp">EMPLOYEES</a></li>
                     <li><a href="#">LOGOUT</a></li>
                </ul>
             </div>
