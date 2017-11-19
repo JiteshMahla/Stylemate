@@ -56,7 +56,7 @@
         
         <%@include file="adminheader.jsp" %>
         
-        <form action="uploadpic" method="post" enctype="multipart/form-data">
+        <form  method="post" enctype="multipart/form-data">
        
            <table align="center" >
             <tr>

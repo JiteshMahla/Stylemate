@@ -19,6 +19,7 @@
                 email = session.getAttribute("email").toString();
                 %>
                 <%@include file="header2.jsp" %>
+                
                 <%
             }
             else
