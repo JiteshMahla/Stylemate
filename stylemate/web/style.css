@@ -1,0 +1,74 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 11, 2017, 3:38:29 PM
+    Author     : DV
+*/
+
+
+.head1
+{
+    color: white; font-family:cursive  ; text-align: center; 
+}
+.head2
+{
+    color: #28a4c9; font-family: 'Comic Sans MS';
+}
+.head21
+{
+    color: #660066; font-family: 'Comic Sans MS';
+}
+.head22{
+    color: #004d4d; font-family: 'Comic Sans MS';
+}
+.head23
+{
+    color: #1a3300; font-family: 'Comic Sans MS';
+    
+}
+.head24{
+    color: red; font-family: 'Comic Sans MS';
+}
+.content
+{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.t1
+{
+    height: 200px;
+    width: 700px;
+}
+.imgm
+{
+    height: 200px;
+}
+.s1
+{
+    font-family:  'Comic Sans MS';
+}
+.head3
+{
+    text-align: center;
+}
+
+.thumbnails {
+                 
+                   height: 200px
+             }
+.img2
+            {
+                width: 140px;
+                height:140px;
+                text-align: center;
+            }
+.b1
+{
+    background: url("images/b1.jpg");
+}
+
+
+
