@@ -35,7 +35,7 @@
     </head>
     <body>
     <%@include file="header.jsp" %>
-        <form method="post">
+    <form action="buypage.jsp" method="post">
         <%
              String r;
             if(request.getParameter("i")!=null)
@@ -78,7 +78,7 @@
                 <td ><%= rs.getString(5)%> </td>
             </tr>   
              <tr>
-            <th> Quantity:</th>
+            <th> QUANTITY:</th>
             <td> <input type="text" id="tbQty" name="tbQty"> </td>
             </tr>
                         </table>
@@ -102,10 +102,6 @@
             </tr>
             </table>
             </form>
-             <%
-             if(request.getParameter("btnSubmit")!=null) 
-           {
-           }
-            %>
+             
     </body>
 </html>

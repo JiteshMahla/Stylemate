@@ -27,13 +27,9 @@
                         <li class="li2"><a href="user2.jsp?i=facial">Facial</a></li>
                         <li class="li2"><a href="user2.jsp?i=body">Body</a></li>
                         <li class="li2"><a href="user2.jsp?i=make-up">Make-up</a></li>
-                        <li class="li2 dropdown">
-                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
-                             <ul class="dropdown-menu">
-                             <li><a href="user3.jsp?i=wash">Wash</a></li>
-                             <li><a href="user4.jsp?i=cream">Mask/Cream</a></li>
-                             </ul>
-                        </li>
+                        <li class="li2"><a href="user2.jsp?i=wash">Wash</a></li>
+                        <li class="li2"><a href="user2.jsp?i=cream">Mask/Cream</a></li>
+                        
                     </ul>
                 </div>
                 <div class="col-md-10">
