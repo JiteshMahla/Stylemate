@@ -49,7 +49,7 @@
             %>
             
     <%@include file="header2.jsp" %>
-    <form action="buypage.jsp" method="post">
+    <form action="buypage.jsp?i=<%= request.getParameter("i")%>" method="post">
         <%
              String r;
             if(request.getParameter("i")!=null)

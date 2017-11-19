@@ -45,7 +45,7 @@
         
         try
         {
-        String qry="select * from login_details where email='"+email+"' and password='"+pass+"' and type=1";
+        String qry="select * from login_details where email='"+email+"' and password='"+pass+"' and type=0";
         ResultSet rs=smt.executeQuery(qry);
         if(rs.next())
         {
