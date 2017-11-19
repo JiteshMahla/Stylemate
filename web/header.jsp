@@ -70,7 +70,7 @@
             <li><a href="products.jsp">LIFESTYLE RETAIL</a></li>
         <li><a href="gallery.jsp">GALLARY</a></li>
         <li><a href="MembershipAndOffer.jsp">MEMBERSHIP & OFFER</a></li>
-        <li><a href="#">CONTACT US</a></li>
+        <li><a href="contact.jsp">CONTACT US</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
