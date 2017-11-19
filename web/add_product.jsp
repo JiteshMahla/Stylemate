@@ -69,7 +69,23 @@
                  <td class="td1"><input type="text" name="tbName"></td>
            
             </tr>
-              
+            
+            <tr>
+                
+                <th class="th1">Product type: </th>
+                <td>
+                    <select name="typeSelect" class="form-control" id="typeSelect">
+                        <option>facial</option>
+                        <option>hair</option>
+                        <option>body</option>
+                        <option>wash</option>
+                        <option>cream</option>
+                    </select>
+    
+                </td>
+          
+            </tr>
+            
             <tr> 
                 <th class="th1">Product Description:</th>
                 <td class="td1"><input type="text" name="tbDesc" > </td>
@@ -91,6 +107,59 @@
             </table>            
             </form>
            
+         <%
+            if(request.getParameter("btnSubmit")!=null)
+            {
+             String id, name, type, description, photo;
+             int price;
+ 
+
+                id=request.getParameter("tbId");
+                name=request.getParameter("tbName");
+                type=request.getParameter("tbType");
+                description=request.getParameter("tbdescription");
+                photo=request.getParameter("photo");
+                price=Integer.parseInt(request.getParameter("tbPrice"));
+         
+            
+               Connection con=null;
+               Statement smt=null;
+               
+               try
+               {
+                   Class.forName("com.mysql.jdbc.Driver");
+                   con=DriverManager.getConnection("jdbc:mysql://localhost:3306/salon","root","");
+                   smt=con.createStatement();
+                   String qry ="insert into deals values('"+id+"','"+name+"','"+type+"','"+description+"',"+price+",'"+photo+"')" ;
+                   int r=smt.executeUpdate(qry);
+                   if(r>0)
+                   {
+                       %>
+                       
+                       <div  class="container-fluid" style="height: 400px">
+                           <h3 style="color: palevioletred">
+                              Product has been inserted, want to insert more?
+                           </h3>
+                           
+                       </div>
+                       
+                       
+                       
+                       
+                       <%
+                               
+                   }
+                   
+                   con.close();
+               }
+               
+               catch(Exception ex)
+                       {
+                           out.println(ex);
+                       }
+          
+            }
+            %>
            <%@include file="footer.jsp" %>
            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
