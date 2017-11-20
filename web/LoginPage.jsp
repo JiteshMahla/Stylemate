@@ -15,7 +15,7 @@
     </head>
     <body>
         <%@include file="ConnectPage.jsp" %>
-        <%@include file="header.jsp" %>
+       
        
          <%
         String error=""; 

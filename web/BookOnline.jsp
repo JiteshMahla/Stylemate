@@ -112,19 +112,19 @@
                 out.println(ex);
             }
             
-            }
+            
+        }
         }
         %>
         
         <div class="login-page">
         <div class="form">
-    <form>
-         
-      <input type="text" name="tb" onkeyup="ajaxname(this.value)" placeholder="Name"/>
+    <form action="email.jsp" method="POST">
+      
+        <input type="text" name="tbName" onkeyup="ajaxname(this.value)" placeholder="Name"/>
       <div id="resultName">
                 
             </div>
-      
       <input type="text" name="tbEmail" onkeyup="ajaxemail(this.value)" placeholder="Email address"/>
       <div id="resultEmail">
                 
@@ -132,7 +132,7 @@
       
       <input type="text" name="tbDate" placeholder="Date of Appointment"/>
       
-      <input type="text" name="tbDate" placeholder="Time"/>
+      <input type="text" name="tbTime" placeholder="Time"/>
       
       
      
@@ -146,7 +146,7 @@ $(document).ready(function(){
                 
             </div>
       
-      <input type="submit" class="btn-custom" name="btnRegister" value="Register">
+      <input type="submit" class="btn-custom" name="btnRegister" value="Book Now">
       <div class="alert-login">
   <%=error%>
 </div>
@@ -154,26 +154,7 @@ $(document).ready(function(){
     </form>
   </div>
 </div>
-  <%
-    if(flag==1)
-    {
-        %>
-        <div class="alert-create">
-            Your Appointment has been booked. 
-            Soon you'll get a confirmation message on your registered email-address.
-            Gorgeous Looks awaits for your gracius presence. Thank you.
-        </div>
-        <div class="align-center">
-            <a class="a" href="Home.jsp">Go back to Home Page</a>
-        </div>
-            <%
-    }
-        
-        %>
 
-        
-        
-         
         
         
         
