@@ -52,22 +52,6 @@
                     objrequest.open("GET","CreateAccount2Email.jsp?email="+str+"",true);
                     objrequest.send();    
             }
-            function ajaxpass(str)
-            {
-                var rdiv = document.getElementById("resultPass");
-                var objrequest = new XMLHttpRequest;
-                
-                objrequest.onreadystatechange = function()
-                {
-                    if(objrequest.readyState===4 && objrequest.status===200)
-                    {
-                        rdiv.innerHTML = objrequest.responseText;
-                    }
-                       
-                }
-                    objrequest.open("GET","CreateAccount3Pass.jsp?pass="+str+"",true);
-                    objrequest.send();    
-            }
             
         </script>
         
@@ -116,15 +100,11 @@ $(document).ready(function(){
 });
 </script>
 
-      <div id="resultPass">
-                
-            </div>
       
       <input type="submit" class="btn-custom" name="btnBooknow" value="Book Now">
       <div class="alert-login">
   <%=error%>
 </div>
-      <p class="message">A member? <a href="LoginPage.jsp">Sign In</a></p>
     </form>
   </div>
 </div>
