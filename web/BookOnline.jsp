@@ -81,6 +81,15 @@
           String result="",error="";
         %>
         
+        <div class="row"> 
+            <div class="col-md-1"></div>
+            <div class="col-md-1">
+                <p class="admin"><a href="Home.jsp" style="color: white">
+                <span class="glyphicon glyphicon-menu-left"></span> Back
+                    </a></p>
+            </div>
+            <div class="col-md-10"></div>
+        </div>
         
         <div class="login-page">
         <div class="form">
