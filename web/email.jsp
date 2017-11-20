@@ -14,18 +14,44 @@
         
     </head>
     <body>
-<%
-    out.println("<h3>HI ,</h3> ");
+          
+        <%@include file="ConnectPage.jsp" %>
+        <%@include file="header.jsp" %>
+        
+     <%   
+        String email="", name="", date="",time="";
+        if(request.getParameter("btnBooknow")!=null)
+        {
+            
+            email = request.getParameter("tbEmail");
+            name = request.getParameter("tbName");
+            date = request.getParameter("tbDate");
+            time = request.getParameter("tbTime");
+    
+            try{
+                String qry = "insert into book_online values('"+name+"','"+email+"','"+date+"','"+time+"')";
+                int r=smt.executeUpdate(qry);
+                if(r>0)
+                {
+                    System.out.println("Inserted Succesfully.");
+                }
+                con.close();
+            }
+            catch(Exception ex)
+            {
+                out.println(ex);
+            }
+            
+        }
+        %>
+  
+        <div class="container-fluid" style="height: 300px">
+  <%  out.println("<h3>HI </h3> ");
 
-    String name ,email,date,time;
-   
-    email=request.getParameter("tbEmail");
-    name=request.getParameter("tbName");
-    date=request.getParameter("tbDate");
-    time=request.getParameter("tbTime");
-       
-    out.println("<h3>"+name+"\nYour Appointment has been booked. Soon you'll get a confirmation message on your registered email-address "+email+".\n Thank you.\n</h3>\n\n <h2>Redirecting to Home...<h2>");
-
+    out.println("<h3>"+name+",\nYour Appointment has been booked. Soon you'll get a confirmation message on your registered email-address "+email+".\n\nThank you.\n</h3>\n\n <h2>Redirecting to Home...<h2>");
+%>
+        </div> 
+            <%
     try
     {    
         String username = name;
@@ -64,7 +90,7 @@
                 Transport.send(message);
 
                 System.out.println("Done");
-                response.setHeader("Refresh", "2;url=Home.jsp");
+                response.setHeader("Refresh", "4;url=Home.jsp");
 
         } catch (MessagingException e) {
                 throw new RuntimeException(e);
@@ -76,5 +102,7 @@
             }  
 
 %>
+
+    <%@include file="footer.jsp" %>
     </body>
 </html>

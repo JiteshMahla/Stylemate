@@ -60,6 +60,7 @@
         
         <%@include file="ConnectPage.jsp" %>
         
+        
         <%
          int flag=0;
           String result="",error="";
@@ -109,48 +110,7 @@ $(document).ready(function(){
   </div>
 </div>
 
-<%
-        
-        if(request.getParameter("btnBooknow")!=null)
-        {
-            
-            String email, name, date,time;
-            
-            
-            email = request.getParameter("tbEmail");
-            name = request.getParameter("tbName");
-            date = request.getParameter("tbDate");
-            time = request.getParameter("tbTime");
-            
-            
-            if(email=="" && name=="" && date=="" && time=="")
-            {
-                error = "Please fill the Details.";   
-            }
-            else
-            {
-            
-            try{
-                String qry = "insert into book_online values('"+name+"','"+email+"','"+date+"','"+time+"')";
-                int r=smt.executeUpdate(qry);
-                if(r>0)
-                {
-                    flag=1;
-                }
-                con.close();
-            }
-            catch(Exception ex)
-            {
-                out.println(ex);
-            }
-            
-            
-        }
-        }
-        %>
 
-        
-        
         
          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
