@@ -76,10 +76,53 @@
         
         <%@include file="ConnectPage.jsp" %>
         
-         <%
+        <%
          int flag=0;
           String result="",error="";
-        if(request.getParameter("btnRegister")!=null)
+        %>
+        
+        
+        <div class="login-page">
+        <div class="form">
+    <form action="email.jsp" method="POST">
+      
+        <input type="text" name="tbName" onkeyup="ajaxname(this.value)" placeholder="Name"/>
+      <div id="resultName">
+                
+            </div>
+      <input type="text" name="tbEmail" onkeyup="ajaxemail(this.value)" placeholder="Email address"/>
+      <div id="resultEmail">
+                
+            </div>
+      
+      <input type="text" name="tbDate" placeholder="Date of Appointment"/>
+      
+      <input type="text" name="tbTime" placeholder="Time"/>
+      
+      
+     
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+
+      <div id="resultPass">
+                
+            </div>
+      
+      <input type="submit" class="btn-custom" name="btnBooknow" value="Book Now">
+      <div class="alert-login">
+  <%=error%>
+</div>
+      <p class="message">A member? <a href="LoginPage.jsp">Sign In</a></p>
+    </form>
+  </div>
+</div>
+
+<%
+        
+        if(request.getParameter("btnBooknow")!=null)
         {
             
             String email, name, date,time;
@@ -116,44 +159,6 @@
         }
         }
         %>
-        
-        <div class="login-page">
-        <div class="form">
-    <form action="email.jsp" method="POST">
-      
-        <input type="text" name="tbName" onkeyup="ajaxname(this.value)" placeholder="Name"/>
-      <div id="resultName">
-                
-            </div>
-      <input type="text" name="tbEmail" onkeyup="ajaxemail(this.value)" placeholder="Email address"/>
-      <div id="resultEmail">
-                
-            </div>
-      
-      <input type="text" name="tbDate" placeholder="Date of Appointment"/>
-      
-      <input type="text" name="tbTime" placeholder="Time"/>
-      
-      
-     
-<script>
-$(document).ready(function(){
-    $('[data-toggle="popover"]').popover();   
-});
-</script>
-
-      <div id="resultPass">
-                
-            </div>
-      
-      <input type="submit" class="btn-custom" name="btnRegister" value="Book Now">
-      <div class="alert-login">
-  <%=error%>
-</div>
-      <p class="message">A member? <a href="LoginPage.jsp">Sign In</a></p>
-    </form>
-  </div>
-</div>
 
         
         

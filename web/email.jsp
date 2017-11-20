@@ -15,7 +15,7 @@
     </head>
     <body>
 <%
-    out.println("HI , ");
+    out.println("<h3>HI ,</h3> ");
 
     String name ,email,date,time;
    
@@ -24,7 +24,7 @@
     date=request.getParameter("tbDate");
     time=request.getParameter("tbTime");
        
-    out.println(name+"\n<h3>Your Appointment has been booked. Soon you'll get a confirmation message on your registered email-address "+email+".\n Thank you.\n</h3>\n\n <h2>Redirecting to Home...<h2>");
+    out.println("<h3>"+name+"\nYour Appointment has been booked. Soon you'll get a confirmation message on your registered email-address "+email+".\n Thank you.\n</h3>\n\n <h2>Redirecting to Home...<h2>");
 
     try
     {    
