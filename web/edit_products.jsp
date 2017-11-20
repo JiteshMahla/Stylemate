@@ -10,6 +10,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+         <link rel="stylesheet" href="css/bootstrap.min.css">
+        
         <link href="admincss.css" rel="stylesheet">
     </head>
     <body>
@@ -54,7 +56,14 @@
                    int x=smt.executeUpdate(qry1);
                    if(x>0)
                    {
-                       out.println("UPDATED!!!!");
+                       %>
+                       <div class="container-fluid">       <h3>
+                           Information Updated!
+                                    </h3>
+                       </div>
+                       <%
+                       
+                       
                    }
                    
                    else
