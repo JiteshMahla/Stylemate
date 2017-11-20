@@ -82,16 +82,16 @@
         if(request.getParameter("btnRegister")!=null)
         {
             
-            String email, name, pass;
-            int type;
+            String email, name, date,time;
+            
             
             email = request.getParameter("tbEmail");
-            pass = request.getParameter("tbPass");
-            name = request.getParameter("tbUsername");
+            name = request.getParameter("tbName");
+            date = request.getParameter("tbDate");
+            time = request.getParameter("tbTime");
             
-            type = 0;
             
-            if(name=="" && pass=="" && email=="")
+            if(email=="" && name=="" && date=="" && time=="")
             {
                 error = "Please fill the Details.";   
             }
@@ -99,7 +99,7 @@
             {
             
             try{
-                String qry = "insert into login_details values('"+email+"','"+name+"','"+pass+"','"+type+"')";
+                String qry = "insert into book_online values('"+name+"','"+email+"','"+date+"','"+time+"')";
                 int r=smt.executeUpdate(qry);
                 if(r>0)
                 {
@@ -116,36 +116,11 @@
         }
         %>
         
-        <%
-            String email="";
-            if(session.getAttribute("email")!=null)
-            {
-                email = session.getAttribute("email").toString(); 
-            }
-            else
-            {
-                response.sendRedirect("LoginPage.jsp");
-            }
-            
-            %>
-            
-           
-            <%@include file="header2.jsp" %> 
-            
-        <div class="row"> 
-            <div class="col-md-1"></div>
-            <div class="col-md-1">
-                <p class="admin"><a href="Home.jsp" style="color: white">
-                <span class="glyphicon glyphicon-menu-left"></span> Back
-                    </a></p>
-            </div>
-            <div class="col-md-10"></div>
-        </div>
-        
         <div class="login-page">
         <div class="form">
     <form>
-      <input type="text" name="tbUsername" onkeyup="ajaxname(this.value)" placeholder="Username"/>
+         
+      <input type="text" name="tb" onkeyup="ajaxname(this.value)" placeholder="Name"/>
       <div id="resultName">
                 
             </div>
@@ -155,13 +130,12 @@
                 
             </div>
       
-      <input type="password" name="tbPass" onkeyup="ajaxpass(this.value)"  placeholder="Password"/><div class="hint-popup">
-  <a href="#" data-toggle="popover" data-trigger="hover" data-content="Password must contain atleast one digit,
-     a lower case letter, an upper case letter, a special character, no whitespaces and must be of atleast 8 characters.">Hint?</a>
-</div>
+      <input type="text" name="tbDate" placeholder="Date of Appointment"/>
+      
+      <input type="text" name="tbDate" placeholder="Time"/>
       
       
-
+     
 <script>
 $(document).ready(function(){
     $('[data-toggle="popover"]').popover();   
@@ -176,7 +150,7 @@ $(document).ready(function(){
       <div class="alert-login">
   <%=error%>
 </div>
-      <p class="message">Already registered? <a href="LoginPage.jsp">Sign In</a></p>
+      <p class="message">A member? <a href="LoginPage.jsp">Sign In</a></p>
     </form>
   </div>
 </div>
@@ -185,11 +159,12 @@ $(document).ready(function(){
     {
         %>
         <div class="alert-create">
-            Account Created.
-            Welcome to  Stylemate.<br>
+            Your Appointment has been booked. 
+            Soon you'll get a confirmation message on your registered email-address.
+            Gorgeous Looks awaits for your gracius presence. Thank you.
         </div>
         <div class="align-center">
-            <a class="a" href="LoginPage.jsp">Sign in Now</a>
+            <a class="a" href="Home.jsp">Go back to Home Page</a>
         </div>
             <%
     }

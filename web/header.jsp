@@ -19,18 +19,18 @@
     <body>
       
         
-          <div class="row container-main">
+          <div class="container-main">
             
                 <div class="row">
             
                 <div class="col-md-4">
-                    <img src="images/logo3.png" height="100" width="130" class="img-circle person" alt="Random Name">
+                    <img src="images/logo3.png" height="100" width="130" class="img-circle" alt="Random Name">
                 </div>
                 <div class="col-md-8">
                     <div class="row container-head1">
                         
                         <div class="col-md-2 align-right">
-                             <img src="images/clock5.png" height="40" width="40" class="img-circle person" alt="Random Name"> 
+                             <img src="images/clock5.png" height="40" width="40" class="img-circle" alt="Random Name"> 
                         </div>
                             <div class="col-md-6">
                                
@@ -39,7 +39,7 @@
                     
                         </div>  
                         <div class="col-md-2">
-                                <a href="#" class="btn btn-default btn-sm al-btn-right" role="button" name="btnBook">
+                                <a href="BookOnline.jsp" class="btn btn-default btn-sm al-btn-right" role="button" name="btnBook">
       Book Online </a>
                         </div>   
                         <div class="col-md-2">

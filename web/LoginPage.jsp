@@ -10,12 +10,12 @@
          <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/stylelogin.css" />
-        <link rel="stylesheet" href="css/style2.css" />
         
         
     </head>
     <body>
         <%@include file="ConnectPage.jsp" %>
+        <%@include file="header.jsp" %>
        
          <%
         String error=""; 
@@ -84,7 +84,7 @@
         
        <div class="login-page">
         <div class="form">
-    <form class="login-form">
+    <form>
       <input type="text" id="tbEmail" name="tbEmail" placeholder="Email id"/>
       <div class="alert-login">
   <%=error1%>
