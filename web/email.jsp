@@ -48,7 +48,7 @@
         <div class="container-fluid" style="height: 300px">
   <%  out.println("<h3>HI </h3> ");
 
-    out.println("<h3>"+name+",\nYour Appointment has been booked. Soon you'll get a confirmation message on your registered email-address "+email+".\n\nThank you.\n</h3>\n\n <h2>Redirecting to Home...<h2>");
+    out.println("<h3>"+name+",\nYour Appointment has been booked. Soon you'll get a confirmation message on your registered email-address "+email+".\n\n\nThank you.</h3>\n\n <h2>Redirecting to Home...<h2>");
 %>
         </div> 
             <%
