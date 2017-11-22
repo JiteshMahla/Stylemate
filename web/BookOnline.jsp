@@ -47,7 +47,7 @@
     var date = document.forms["myForm"]["tbDate"].value;
     var re = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
     
-    if(date != '') {
+    if(date != "") {
       if(regs = date.match(re)) {
         // day value between 1 and 31
         if(regs[1] < 1 || regs[1] > 31) {
@@ -67,6 +67,11 @@
          
           return false;
         }
+        if(regs[3] < 2018 ) {
+          alert("Sorry, We dont take Bookings this long : " + regs[3]);
+         
+          return false;
+        }
       } else {
       
         return false;
@@ -79,30 +84,29 @@
     var ptime = /^(\d{1,2}):(\d{2})([ap]m)?$/;
 
     if(time != '') {
-      if(regs = time.match(ptime)) {
-        if(regs[3]) {
+      if(reg = time.match(ptime)) {
+        if(reg[3]) {
           // 12-hour value between 1 and 12
-          if(regs[1] < 1 || regs[1] > 12) {
-            alert("Invalid value for hours: " + regs[1]);
+          if(reg[1] < 1 || reg[1] > 12) {
+            alert("Invalid value for hours: " + reg[1]);
            
             return false;
           }
         } else {
           // 24-hour value between 0 and 23
-          if(regs[1] > 23) {
-            alert("Invalid value for hours: " + regs[1]);
+          if(reg[1] > 23) {
+            alert("Invalid value for hours: " + reg[1]);
            
             return false;
           }
         }
         // minute value between 0 and 59
-        if(regs[2] > 59) {
-          alert("Invalid value for minutes: " + regs[2]);
+        if(reg[2] > 59) {
+          alert("Invalid value for minutes: " + reg[2]);
          
           return false;
         }
       } else {
-        alert("Invalid time format: " + form.starttime.value);
        
         return false;
       }
@@ -117,23 +121,23 @@
         var n = isValidName();
         var d = isValidDate();
         var t = isValidTime();
-                
-                if(n===false)
+        
+                if(n==false)
                 {
                     alert("Invalid Name.");
                     return false;
                 }
-                else if(e===false)
+                else if(e==false)
                 {
                     alert("Invalid Email address.");
                     return false;
                 }
-                else if(d===false)
+                else if(d==false)
                 {
                     alert("Invalid Date.");
                     return false;
                 }
-                else if(t===false)
+                else if(t==false)
                 {
                     alert("Invalid Time.");
                     return false;
