@@ -91,18 +91,14 @@
             pass = request.getParameter("tbPass");
             name = request.getParameter("tbUsername");
             
-            String pname = "^[a-zA-Z\\s]+$";
+            String pname = "^[a-zA-Z\\s]+$"; 
             String pemail = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
         + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
             String ppass = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
             
             type = 0;
             
-            if( name=="" || pass=="" || email=="" || (name=="" && pass=="") || (pass=="" && email=="") || (email=="" && name=="") || (name=="" && pass=="" && email==""))
-            {
-                error = "Please fill all the Details Carefully.";   
-            }
-            else if(!name.matches(pname))
+            if(!name.matches(pname))
             {
                 error_name = "Invalid Name";
             }       
@@ -148,7 +144,7 @@
         <div class="login-page">
         <div class="form">
     <form>
-      <input type="text" name="tbUsername" onkeyup="ajaxname(this.value)" placeholder="Username"/>
+      <input type="text" name="tbUsername" onkeyup="ajaxname(this.value)" placeholder="Username" size="30" required/>
       <div id="resultName">
                 
             </div>
@@ -156,7 +152,7 @@
         <%=error_name%>
       </div>
       
-      <input type="text" name="tbEmail" onkeyup="ajaxemail(this.value)" placeholder="Email address"/>
+      <input type="text" name="tbEmail" onkeyup="ajaxemail(this.value)" placeholder="Email address" size="40" required/>
       <div id="resultEmail">
                 
             </div>
@@ -165,7 +161,7 @@
       </div>
 
       
-      <input type="password" name="tbPass" onkeyup="ajaxpass(this.value)"  placeholder="Password"/>
+      <input type="password" name="tbPass" onkeyup="ajaxpass(this.value)"  placeholder="Password" size="30" required/>
       <div class="alert-login">
         <%=error_pass%>
       </div><div class="hint-popup">

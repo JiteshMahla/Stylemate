@@ -18,6 +18,120 @@
         <link rel="stylesheet" href="css/style2.css" />
          <link rel="stylesheet" href="css/stylelogin.css" />
          
+<script>         
+    function isValidName() {
+    var name = document.forms["myForm"]["tbName"].value;
+    var pname = /^[a-zA-Z ]+$/;
+    if (!pname.test(name)) {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+    }
+    function isValidEmail() {
+    var email = document.forms["myForm"]["tbEmail"].value;
+    var pEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!pEmail.test(email)) {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+    }
+    
+    function isValidDate()
+  {
+    var date = document.forms["myForm"]["tbDate"].value;
+    var re = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
+    
+    if(date != '') {
+      if(regs = date.match(re)) {
+        // day value between 1 and 31
+        if(regs[1] < 1 || regs[1] > 31) {
+          alert("Invalid value for day: " + regs[1]);
+         
+          return false;
+        }
+        // month value between 1 and 12
+        if(regs[2] < 1 || regs[2] > 12) {
+          alert("Invalid value for month: " + regs[2]);
+       
+          return false;
+        }
+        // year value between 1902 and 2017
+        if(regs[3] < 2017 ) {
+          alert("Invalid value for year: " + regs[3]);
+         
+          return false;
+        }
+      } else {
+      
+        return false;
+      }
+    } 
+  }
+   function isValidTime()
+  {
+      var time = document.forms["myForm"]["tbTime"].value;
+    var ptime = /^(\d{1,2}):(\d{2})([ap]m)?$/;
+
+    if(time != '') {
+      if(regs = time.match(ptime)) {
+        if(regs[3]) {
+          // 12-hour value between 1 and 12
+          if(regs[1] < 1 || regs[1] > 12) {
+            alert("Invalid value for hours: " + regs[1]);
+           
+            return false;
+          }
+        } else {
+          // 24-hour value between 0 and 23
+          if(regs[1] > 23) {
+            alert("Invalid value for hours: " + regs[1]);
+           
+            return false;
+          }
+        }
+        // minute value between 0 and 59
+        if(regs[2] > 59) {
+          alert("Invalid value for minutes: " + regs[2]);
+         
+          return false;
+        }
+      } else {
+        alert("Invalid time format: " + form.starttime.value);
+       
+        return false;
+      }
+    }
+
+  }
+  
+  
+    function validateForm() {
+        
+        var e = isValidEmail();
+        var n = isValidName();
+        isValidDate();
+        isValidTime();
+                
+                if(n===false)
+                {
+                    alert("Invalid Name.");
+                    return false;
+                }
+                else if(e===false)
+                {
+                    alert("Invalid Email address.");
+                    return false;
+                }
+      
+    }
+    </script>
+
          <script type="text/javascript">
             
             function ajaxname(str)
@@ -54,17 +168,12 @@
             }
             
         </script>
-        
+   
     </head>
     <body>
         
         <%@include file="ConnectPage.jsp" %>
         
-        
-        <%
-         int flag=0;
-          String result="",error="";
-        %>
         
         <div class="row"> 
             <div class="col-md-1"></div>
@@ -78,33 +187,24 @@
         
         <div class="login-page">
         <div class="form">
-    <form action="email.jsp" method="POST">
+    <form name="myForm" action="email.jsp"  onsubmit="return validateForm()" method="POST">
       
-        <input type="text" name="tbName" onkeyup="ajaxname(this.value)" placeholder="Name"/>
+        <input type="text" name="tbName" onkeyup="ajaxname(this.value)" placeholder="Name" required="" />
       <div id="resultName">
                 
             </div>
-      <input type="text" name="tbEmail" onkeyup="ajaxemail(this.value)" placeholder="Email address"/>
+      <input type="text" name="tbEmail" onkeyup="ajaxemail(this.value)" placeholder="Email address" required />
       <div id="resultEmail">
                 
             </div>
       
-      <input type="text" name="tbDate" placeholder="Date of Appointment"/>
+      <input type="text" name="tbDate" placeholder="dd/mm/yyyy" required="" />
       
-      <input type="text" name="tbTime" placeholder="Time"/>
+      <input type="text" name="tbTime" placeholder="hh:mm" required />
       
-      
-     
-<script>
-$(document).ready(function(){
-    $('[data-toggle="popover"]').popover();   
-});
-</script>
-
-      
+           
       <input type="submit" class="btn-custom" name="btnBooknow" value="Book Now">
       <div class="alert-login">
-  <%=error%>
 </div>
     </form>
   </div>

@@ -19,7 +19,7 @@
         <%@include file="header.jsp" %>
         
      <%   
-        String email="", name="", date="",time="";
+        String email="", name="", date="",time="",error="";
         if(request.getParameter("btnBooknow")!=null)
         {
             
@@ -27,7 +27,7 @@
             name = request.getParameter("tbName");
             date = request.getParameter("tbDate");
             time = request.getParameter("tbTime");
-    
+            
             try{
                 String qry = "insert into book_online values('"+name+"','"+email+"','"+date+"','"+time+"')";
                 int r=smt.executeUpdate(qry);
