@@ -64,13 +64,13 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="Home.jsp">HOME</a></li>
-         <li><a href="aboutUs.jsp">ABOUT US</a></li>
-            <li><a href="spaAndSalon.jsp">SPA AND SALON</a></li>
-            <li><a href="products.jsp">LIFESTYLE RETAIL</a></li>
-        <li><a href="gallery.jsp">GALLARY</a></li>
-        <li><a href="MembershipAndOffer.jsp">MEMBERSHIP & OFFER</a></li>
-        <li><a href="contact.jsp">CONTACT US</a></li>
+        <li><a href="Home.jsp">Home</a></li>
+         <li><a href="aboutUs.jsp">About Us</a></li>
+         <li><a href="spaAndSalon.jsp">Spa & Salon</a></li>
+         <li><a href="products.jsp">Lifestyle Retail</a></li>
+        <li><a href="gallery.jsp">Gallery</a></li>
+        <li><a href="MembershipAndOffer.jsp">Membership & Offer</a></li>
+        <li><a href="contact.jsp">Contact Us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="CreateAccount.jsp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>

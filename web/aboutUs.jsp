@@ -19,7 +19,7 @@
     </head>
     <body>
         
-        <div class="container-fluid">
+     
             
             <%
             String email="";
@@ -39,7 +39,7 @@
             }
             
             %>
-            
+               <div class="container-fluid">
             <div class="row" style="background-color: black">
                  <h1 class="head1">About Us </h1>
             </div>

@@ -22,7 +22,7 @@
        
         
         
-        <div class="container-fluid" style="margin-top: 30px">
+       
              
             <%
             String email="";
@@ -42,7 +42,7 @@
             }
             
             %>
-            
+             <div class="container-fluid">
             <div class="row" style="background-color: black">
                  <h1 class="head1">Spa and Salon Menu</h1>
             </div>

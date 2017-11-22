@@ -71,7 +71,6 @@
                  <a class="dropdown-toggle" data-toggle="dropdown" href="products_admin.jsp">DEALS
                  <span class="caret"></span></a>
                  <ul class="dropdown-menu">
-                     <li><a href="add_product.jsp">Add Product/Deal</a></li>
                      <li><a href="products_admin.jsp">View/Delete/Update</a></li>
                  </ul>                     
                  </li>

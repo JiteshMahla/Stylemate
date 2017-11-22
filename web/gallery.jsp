@@ -19,8 +19,7 @@
     </head>
     <body>
         
-        <div class="container-fluid">
-            
+        
             <%
             String email="";
             if(session.getAttribute("email")!=null)
@@ -39,6 +38,7 @@
             }
             
             %>
+            <div class="container-fluid">
             
             <div class="row" style="background-color: black">
                  <h1 class="head1">GALLERY </h1>
