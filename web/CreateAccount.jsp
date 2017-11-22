@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="css/style2.css" />
          <link rel="stylesheet" href="css/stylelogin.css" />
          
+            
          <script type="text/javascript">
             
             function ajaxname(str)
@@ -71,13 +72,15 @@
             }
             
         </script>
+        
+       
     </head>
     <body>
         <%@include file="ConnectPage.jsp" %>
         
          <%
          int flag=0;
-          String result="",error="";
+          String result="",error="",error_name="",error_email="",error_pass="";
         if(request.getParameter("btnRegister")!=null)
         {
             
@@ -88,15 +91,32 @@
             pass = request.getParameter("tbPass");
             name = request.getParameter("tbUsername");
             
+            String pname = "^[a-zA-Z\\s]+$";
+            String pemail = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+        + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+            String ppass = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
+            
             type = 0;
             
-            if(name=="" && pass=="" && email=="")
+            if( name=="" || pass=="" || email=="" || (name=="" && pass=="") || (pass=="" && email=="") || (email=="" && name=="") || (name=="" && pass=="" && email==""))
             {
-                error = "Please fill the Details.";   
+                error = "Please fill all the Details Carefully.";   
+            }
+            else if(!name.matches(pname))
+            {
+                error_name = "Invalid Name";
+            }       
+            else if(!email.matches(pemail))
+            {
+                error_email = "Invalid Email id";
+            }
+            else if(!pass.matches(ppass))
+            {
+                error_pass = "Invalid Password";
             }
             else
             {
-            
+                
             try{
                 String qry = "insert into login_details values('"+email+"','"+name+"','"+pass+"','"+type+"')";
                 int r=smt.executeUpdate(qry);
@@ -132,13 +152,23 @@
       <div id="resultName">
                 
             </div>
+      <div class="alert-login">
+        <%=error_name%>
+      </div>
       
       <input type="text" name="tbEmail" onkeyup="ajaxemail(this.value)" placeholder="Email address"/>
       <div id="resultEmail">
                 
             </div>
+      <div class="alert-login">
+            <%=error_email%>
+      </div>
+
       
-      <input type="password" name="tbPass" onkeyup="ajaxpass(this.value)"  placeholder="Password"/><div class="hint-popup">
+      <input type="password" name="tbPass" onkeyup="ajaxpass(this.value)"  placeholder="Password"/>
+      <div class="alert-login">
+        <%=error_pass%>
+      </div><div class="hint-popup">
   <a href="#" data-toggle="popover" data-trigger="hover" data-content="Password must contain atleast one digit,
      a lower case letter, an upper case letter, a special character, no whitespaces and must be of atleast 8 characters.">Hint?</a>
 </div>
@@ -154,6 +184,8 @@ $(document).ready(function(){
       <div id="resultPass">
                 
             </div>
+      
+
       
       <input type="submit" class="btn-custom" name="btnRegister" value="Register">
       <div class="alert-login">
