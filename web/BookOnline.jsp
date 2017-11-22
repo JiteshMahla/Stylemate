@@ -115,8 +115,8 @@
         
         var e = isValidEmail();
         var n = isValidName();
-        isValidDate();
-        isValidTime();
+        var d = isValidDate();
+        var t = isValidTime();
                 
                 if(n===false)
                 {
@@ -128,6 +128,17 @@
                     alert("Invalid Email address.");
                     return false;
                 }
+                else if(d===false)
+                {
+                    alert("Invalid Date.");
+                    return false;
+                }
+                else if(t===false)
+                {
+                    alert("Invalid Time.");
+                    return false;
+                }
+                
       
     }
     </script>
